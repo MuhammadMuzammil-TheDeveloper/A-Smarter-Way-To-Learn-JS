@@ -1,4 +1,4 @@
-// ALert 
+// ALert
 //. Write a script to greet your website visitor using JS alert box.
 // alert("Hello! Wlesome to my website")
 
@@ -14,5 +14,3 @@
 
 //5.
 // alert("Hello... i can run JS through my web browser's console")
-
-//6. 
