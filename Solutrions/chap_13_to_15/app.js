@@ -102,14 +102,77 @@
 // document.write(newResult);
 
 //13.
-var userName = prompt(`Enter your Name`);
-var incorrectUserName = false;
-for(var i=0; i<userName.length; i++){
-    if(userName[i] != `@` && userName[i] != `,` && userName[i] != `.` &&userName[i] != `!` ){
-        console.log(`Yor Nam,e is correct`);
-        incorrectUserName = true;
+// var userName = prompt(`Enter your Name`);
+// var isValid = true;
+
+// for (var i = 0; i < userName.length; i++) {
+//     var code = userName.charCodeAt(i);
+//     if (code === 33 || code === 44 || code === 46 || code === 64) {
+//         isValid = false;
+//         break;
+//     }
+// }
+// if (isValid) {
+//     console.log("Your username is correct");
+// } else {
+//     console.log("Enter a valid username");
+// }
+
+//15.
+// var password = prompt(`enter a password`);
+// var hasLetter = false;
+// var hasNumber = false;
+// var isValid = true;
+
+// if(password.length <6){
+//     isValid = false;
+// }
+// var firstCode = password.charAt(0);
+// if(firstCode>=48 && firstCode<=57){
+//     isValid=false;
+// }
+
+// for(var i=0; i<password.length; i++){
+//     var code = password.charCodeAt(i);
+
+//     // A-Z or a-z
+//     if ((code >= 65 && code <= 90) || (code >= 97 && code <= 122)) {
+//         hasLetter = true;
+//     }
+
+//     // 0-9
+//     if (code >= 48 && code <= 57) {
+//         hasNumber = true;
+//     }
+// }
+// // must contain both
+// if (!hasLetter || !hasNumber) {
+//     isValid = false;
+// }
+
+// if (isValid) {
+//     console.log("Password is valid ");
+// } else {
+//     console.log("Enter a valid password ");
+// }
+
+// //16.
+// var university = "University of Karachi"
+// var result = university.split("")
+// for(var i=0; i<result.length; i++){
+//     console.log(result[i])
+// }
+
+//17.
+// var userInput = prompt(`Enter any name`); 
+// console.log(userInput.slice(-1))
+
+//18.
+var para = ` the hello world the THE , the new `;
+var count=0
+for(var i=0;i<para.length;i++){
+    if(para.slice(i, i+3).toLocaleLowerCase() === 'the'){
+        count++;
     }
 }
-if(!incorrectUserName){
-    console.log(`Enter a valid userName`) 
-}
+console.log(count)
