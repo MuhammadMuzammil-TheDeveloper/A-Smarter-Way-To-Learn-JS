@@ -21,9 +21,31 @@
 // }
 // sumOf()
 
-//4.
-funcion cal(num1, opt, num2){
-    if(opt == `+`){
-        
-    }
+// //4.
+// function cal(num1, opt, num2){
+//     if(opt == `+`){
+//         document.writeln(`ADD: ${num1 +num2}`)
+//     }
+//     else if(opt == `-`){
+//         document.writeln(`SUM: ${num1 - num2}`)
+//     }
+//     else if(opt == `*`){
+//         document.writeln(`MUL: ${num1 * num2}`)
+//     }
+//     else if(opt == `/`){
+//         document.writeln(`DIV: ${num1 / num2}`)
+//     }else{
+//         alert(`Invalid Opt`)
+//     }
+// }
+// var num1 = +prompt(`Enter a num1`)
+// var opt = prompt(`Enter Operator  - * /`)
+// var num2 = +prompt(`Enter a num2`)
+// cal(num1, opt, num2)
+
+//5.
+function sqr(num){
+    document.writeln(`Square ${num * num}`)
 }
+var num = +prompt(`Enter a number`)
+sqr(num)
