@@ -153,3 +153,17 @@
 // var p1 = prompt(`enter a string`)
 // var p2 = prompt(`enter a letter`)
 // check(p1,p2)
+
+//14.
+function calcCircumference(radius) {
+    let circumference = 2 * Math.PI * radius;
+    document.writeln(`The circumference is ${circumference}<br>`);
+}
+
+function calcArea(radius) {
+    let area = Math.PI * radius * radius;
+    document.writeln(`The area is ${area}`);
+}
+
+calcCircumference(20);
+calcArea(20);
