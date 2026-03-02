@@ -127,3 +127,27 @@ return count;
 }
 var text = `hello world kese ho sab aaa ae`
 console.log(checkVowel(text))
+
+
+//8.
+var userInput = +prompt(`Enter a distance in km`)
+function meter(userInput){
+    var meter = userInput * 1000
+    return meter
+}
+console.log(`Meter`, meter(userInput))
+function centimeter(userInput){
+    var centimeter = userInput * 100000
+    return centimeter
+}
+console.log(`Centimeter`, meter(userInput))
+function feet(userInput){
+    var feet = userInput * 3280.84
+    return feet
+}
+console.log(`Feet`, meter(userInput))
+function inches(userInput){
+    var inches = userInput * 39370.1
+    return inches
+}
+console.log(`Inches`, meter(userInput))
