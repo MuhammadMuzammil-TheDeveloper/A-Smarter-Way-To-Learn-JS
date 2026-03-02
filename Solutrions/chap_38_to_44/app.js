@@ -167,3 +167,32 @@ function overTimePay(hours) {
 
 overTimePay(userInput);
 
+
+//10.
+var amountInput = +prompt("Enter the amount to withdraw (in multiples of 100):");
+
+var hundred = 100;
+var fifty = 50;
+var ten = 10;
+
+function calculateNotes(amount) {
+    var hundredsCount = Math.floor(amount / hundred);
+    var remaining = amount % hundred;
+
+    var fiftiesCount = Math.floor(remaining / fifty);
+    remaining = remaining % fifty;
+
+    var tensCount = Math.floor(remaining / ten);
+    remaining = remaining % ten;
+
+    console.log(`Notes to be given:`);
+    console.log(`₹100 notes: ${hundredsCount}`);
+    console.log(`₹50 notes: ${fiftiesCount}`);
+    console.log(`₹10 notes: ${tensCount}`);
+
+    if (remaining > 0) {
+        console.log(`Remaining amount that cannot be given in available notes: ₹${remaining}`);
+    }
+}
+
+calculateNotes(amountInput);
