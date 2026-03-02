@@ -151,3 +151,19 @@ function inches(userInput){
     return inches
 }
 console.log(`Inches`, meter(userInput))
+
+//9.
+var userInput = +prompt(`Enter total working hours:`);
+
+function overTimePay(hours) {
+    if (hours > 40) {
+        var overtimeHours = hours - 40; 
+        var payAbleAmount = overtimeHours * 12;
+        console.log(`Overtime Payable Amount: Rs. ${payAbleAmount}`);
+    } else {
+        console.log(`You did not work overtime. No extra pay.`);
+    }
+}
+
+overTimePay(userInput);
+
