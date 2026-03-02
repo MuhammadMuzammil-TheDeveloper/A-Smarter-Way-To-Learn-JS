@@ -72,18 +72,58 @@
 // console.log(myIndexOf(text, "z")); 
 
 //6.
-let text = "Hello World";
+// let text = "Hello World";
 
-function deleteVowel(str) {
-    let result = "";
-    for (let i = 0; i < str.length; i++) {
-        let ch = str[i].toLowerCase();
-        if (ch !== 'a' && ch !== 'e' && ch !== 'i' && ch !== 'o' && ch !== 'u') {
-            result += str[i];
-        }
-    }
-    return result;
+// function deleteVowel(str) {
+//     let result = "";
+//     for (let i = 0; i < str.length; i++) {
+//         let ch = str[i].toLowerCase();
+//         if (ch !== 'a' && ch !== 'e' && ch !== 'i' && ch !== 'o' && ch !== 'u') {
+//             result += str[i];
+//         }
+//     }
+//     return result;
+// }
+
+// let newText = deleteVowel(text);
+// console.log(newText); 
+
+//7.
+function checkVowel(text){
+let count = 0;
+for(var i=0; i<text.length; i++){
+    let pair = text[i].toLowerCase() + text[i+1].toLowerCase();
+    switch (pair) {
+            case "aa":
+            case "ae":
+            case "ai":
+            case "ao":
+            case "au":
+            case "ea":
+            case "ee":
+            case "ei":
+            case "eo":
+            case "eu":
+            case "ia":
+            case "ie":
+            case "ii":
+            case "io":
+            case "iu":
+            case "oa":
+            case "oe":
+            case "oi":
+            case "oo":
+            case "ou":
+            case "ua":
+            case "ue":
+            case "ui":
+            case "uo":
+            case "uu":
+                count++;
+                break;
+    } 
 }
-
-let newText = deleteVowel(text);
-console.log(newText); 
+return count;
+}
+var text = `hello world kese ho sab aaa ae`
+console.log(checkVowel(text))
