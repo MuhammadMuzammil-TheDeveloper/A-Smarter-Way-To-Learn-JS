@@ -25,3 +25,15 @@
 //     var img = document.getElementById('img_btn')
 //     img.src = 'https://picsum.photos/200'
 // }
+
+
+//5.
+var countInc =0;
+function incCon(){
+    countInc++
+    document.getElementById('counter').innerHTML = countInc;
+}
+function decCon(){
+    countInc--
+    document.getElementById('counter').innerHTML = countInc;
+}
