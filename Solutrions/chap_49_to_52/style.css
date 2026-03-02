@@ -1,0 +1,19 @@
+
+#AddForm > input{
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    width: 50%;
+}
+/* #AddForm> button{
+
+} */
+
+.hideData{
+    display: none;
+}
+#btn{
+    cursor: pointer;
+    border: 1px solid gray;
+    padding: 7px;
+}
