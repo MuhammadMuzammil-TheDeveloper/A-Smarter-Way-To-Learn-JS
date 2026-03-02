@@ -89,83 +89,83 @@
 // console.log(newText); 
 
 //7.
-function checkVowel(text){
-let count = 0;
-for(var i=0; i<text.length; i++){
-    let pair = text[i].toLowerCase() + text[i+1].toLowerCase();
-    switch (pair) {
-            case "aa":
-            case "ae":
-            case "ai":
-            case "ao":
-            case "au":
-            case "ea":
-            case "ee":
-            case "ei":
-            case "eo":
-            case "eu":
-            case "ia":
-            case "ie":
-            case "ii":
-            case "io":
-            case "iu":
-            case "oa":
-            case "oe":
-            case "oi":
-            case "oo":
-            case "ou":
-            case "ua":
-            case "ue":
-            case "ui":
-            case "uo":
-            case "uu":
-                count++;
-                break;
-    } 
-}
-return count;
-}
-var text = `hello world kese ho sab aaa ae`
-console.log(checkVowel(text))
+// function checkVowel(text){
+// let count = 0;
+// for(var i=0; i<text.length; i++){
+//     let pair = text[i].toLowerCase() + text[i+1].toLowerCase();
+//     switch (pair) {
+//             case "aa":
+//             case "ae":
+//             case "ai":
+//             case "ao":
+//             case "au":
+//             case "ea":
+//             case "ee":
+//             case "ei":
+//             case "eo":
+//             case "eu":
+//             case "ia":
+//             case "ie":
+//             case "ii":
+//             case "io":
+//             case "iu":
+//             case "oa":
+//             case "oe":
+//             case "oi":
+//             case "oo":
+//             case "ou":
+//             case "ua":
+//             case "ue":
+//             case "ui":
+//             case "uo":
+//             case "uu":
+//                 count++;
+//                 break;
+//     } 
+// }
+// return count;
+// }
+// var text = `hello world kese ho sab aaa ae`
+// console.log(checkVowel(text))
 
 
-//8.
-var userInput = +prompt(`Enter a distance in km`)
-function meter(userInput){
-    var meter = userInput * 1000
-    return meter
-}
-console.log(`Meter`, meter(userInput))
-function centimeter(userInput){
-    var centimeter = userInput * 100000
-    return centimeter
-}
-console.log(`Centimeter`, meter(userInput))
-function feet(userInput){
-    var feet = userInput * 3280.84
-    return feet
-}
-console.log(`Feet`, meter(userInput))
-function inches(userInput){
-    var inches = userInput * 39370.1
-    return inches
-}
-console.log(`Inches`, meter(userInput))
+// //8.
+// var userInput = +prompt(`Enter a distance in km`)
+// function meter(userInput){
+//     var meter = userInput * 1000
+//     return meter
+// }
+// console.log(`Meter`, meter(userInput))
+// function centimeter(userInput){
+//     var centimeter = userInput * 100000
+//     return centimeter
+// }
+// console.log(`Centimeter`, meter(userInput))
+// function feet(userInput){
+//     var feet = userInput * 3280.84
+//     return feet
+// }
+// console.log(`Feet`, meter(userInput))
+// function inches(userInput){
+//     var inches = userInput * 39370.1
+//     return inches
+// }
+// console.log(`Inches`, meter(userInput))
 
-//9.
-var userInput = +prompt(`Enter total working hours:`);
+// //9.
+// var userInput = +prompt(`Enter total working hours:`);
 
-function overTimePay(hours) {
-    if (hours > 40) {
-        var overtimeHours = hours - 40; 
-        var payAbleAmount = overtimeHours * 12;
-        console.log(`Overtime Payable Amount: Rs. ${payAbleAmount}`);
-    } else {
-        console.log(`You did not work overtime. No extra pay.`);
-    }
-}
+// function overTimePay(hours) {
+//     if (hours > 40) {
+//         var overtimeHours = hours - 40; 
+//         var payAbleAmount = overtimeHours * 12;
+//         console.log(`Overtime Payable Amount: Rs. ${payAbleAmount}`);
+//     } else {
+//         console.log(`You did not work overtime. No extra pay.`);
+//     }
+// }
 
-overTimePay(userInput);
+// overTimePay(userInput);
 
 
 //10.

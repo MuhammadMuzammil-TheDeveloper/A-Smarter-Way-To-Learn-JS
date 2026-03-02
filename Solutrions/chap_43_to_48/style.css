@@ -1,0 +1,14 @@
+.parentImg{
+    display: flex;
+    margin: 30px;
+    padding: 10px;
+}
+img{
+    padding: 20px;
+    cursor: pointer;
+}
+#btn{
+    cursor: pointer;
+    border: 1px solid gray;
+    padding: 7px;
+}
