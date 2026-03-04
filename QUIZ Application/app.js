@@ -113,11 +113,28 @@ var quizQuestions = [
 var questionElement = document.getElementById('questionElement')
 var optionELement = document.getElementById('optionELement')
 var quizProgress = document.getElementById('quizProgress')
+var reportCardContainer = document.querySelector('.reportCardContainer')
 var nextQuesBtn = document.getElementById('nextQuesBtn')
+var quizContainer = document.querySelector('.quizContainer')
+var formContainer = document.getElementById('formContainer')
+var username = document.getElementById("username").value
+var email = document.getElementById("email").value
+var userClass = document.getElementById("class").value
+var userhead = document.getElementById('userhead')
+
 var counter = 0;
+var totalCorrectAns = 0;
 
 
-function startQuiz() {
+function startQuiz(event) {
+
+    if (event) {
+        event.preventDefault();
+    }
+    quizContainer.style.display = 'block'
+    userhead.innerText = "User: " + username
+
+    formContainer.style.display = 'none'
     var question = quizQuestions[counter].question
     var options = quizQuestions[counter].options
     questionElement.innerHTML = question
@@ -127,7 +144,7 @@ function startQuiz() {
         optionELement.innerHTML += li
     }
     quizProgress.innerHTML = `${counter + 1}/${quizQuestions.length}`
-        nextQuesBtn.setAttribute('disabled',true)
+    nextQuesBtn.setAttribute('disabled', true)
 
 
 }
@@ -136,9 +153,50 @@ function nextQuestion() {
 
     if (counter < quizQuestions.length) {
         startQuiz()
+        totalCorrectAns++
     }
     else {
         alert('QuizEnd')
+        reportCardContainer.style.display = 'block'
+        quizContainer.style.display = 'none'
+        var reportCard = `
+<div class="reportCard">
+
+<h1 class="reportTitle">Quiz Result</h1>
+
+<div class="scoreCircle">
+    <span>${totalCorrectAns}/${quizQuestions.length}</span>
+</div>
+
+<div class="reportDetails">
+
+<div class="detailBox">
+<p>Total Questions</p>
+<h3>${quizQuestions.length}</h3>
+</div>
+
+<div class="detailBox correct">
+<p>Correct Answers</p>
+<h3>${totalCorrectAns}</h3>
+</div>
+
+<div class="detailBox wrong">
+<p>Wrong Answers</p>
+<h3>${quizQuestions.length - totalCorrectAns}</h3>
+</div>
+
+<div class="detailBox grade">
+<p>Grade</p>
+<h3>100</h3>
+</div>
+
+</div>
+
+<button class="restartBtn" onclick="location.reload()">Restart Quiz</button>
+
+</div>
+`
+        reportCardContainer.innerHTML = reportCard
     }
 }
 function checkAns(li) {
@@ -146,9 +204,9 @@ function checkAns(li) {
     var userAns = li.innerHTML
     var allList = optionELement.getElementsByTagName("li")
     var answer = quizQuestions[counter].answer
-    
+
     if (correctAns === userAns) {
-      
+
         li.style.background = "green"
     }
     else {
@@ -161,8 +219,8 @@ function checkAns(li) {
         }
     }
 
-    for(var li of allList){
-      li.style.pointerEvents = "none"
+    for (var li of allList) {
+        li.style.pointerEvents = "none"
     }
-        nextQuesBtn.removeAttribute('disabled')
+    nextQuesBtn.removeAttribute('disabled')
 }
