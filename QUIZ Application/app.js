@@ -224,3 +224,18 @@ function checkAns(li) {
     }
     nextQuesBtn.removeAttribute('disabled')
 }
+
+
+async function fetchQuestions(){
+    try{
+        let response = await fetch('https://opentdb.com/api.php?amount=10&category=18&type=multiple')
+        let data = await response.json()
+        console.log(data)
+        return data.results;
+    }
+    catch{
+        console.error("Error fetching questions:", error);
+        return [];
+    }
+}
+fetchQuestions()
