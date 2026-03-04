@@ -10,42 +10,43 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
-<body onload="startQuiz()">
-   
+<body>
+   <form onsubmit="startQuiz(event)" id="formContainer">
+    <h2>Start Your Quiz</h2>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="email" id="email" placeholder="Enter Email">
+    <input type="text" id="class" placeholder="Enter Class">
+    <button type="submit">Start Quiz</button>
+</form>
+    <div class="quizContainer">
 
-    <div class="quizContainer" >
-
-        <div class="header" >
+        <div class="header">
             <h1>Frontend Quiz</h1>
-            <p>User: Muhammad-Muzammil</p>
+            <p id="userhead"></p>
         </div>
 
-        <div class="body" >
-            <h1 id="questionElement" >1. Which HTML tag is used to create a hyperlink?</h1>
-            <div class="options" >
-                <ul id="optionELement" >
-                   
+        <div class="body">
+            <h1 id="questionElement">1. Which HTML tag is used to create a hyperlink?</h1>
+            <div class="options">
+                <ul id="optionELement">
+
                 </ul>
 
             </div>
-            
+
         </div>
-        
-        <div class="footer" >
-            <p id="quizProgress" > </p>
-            <button  disabled id="nextQuesBtn" onclick="nextQuestion()" >Next</button>
+
+        <div class="footer">
+            <p id="quizProgress"> </p>
+            <button disabled id="nextQuesBtn" onclick="nextQuestion()">Next</button>
         </div>
 
 
     </div>
-<!-- 
-    <div class="reportCardContainer" >
-            <h1>Report Card</h1>
-            <p>Total Question: 100</p>
-            <p id="correctPara" ></p>
-            <p>Wrong Answer: 100</p>
-            <p>Grade: 100</p>
-    </div> -->
+
+    <div class="reportCardContainer">
+
+    </div>
 
 
 
@@ -53,7 +54,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-        <script src="./app.js"></script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
