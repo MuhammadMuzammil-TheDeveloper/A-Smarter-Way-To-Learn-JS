@@ -751,4 +751,8 @@ form button:active { transform: translateY(0); }
 .restartBtn:hover{
     transform:translateY(-2px);
     box-shadow:0 10px 20px rgba(0,0,0,0.2);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c183917c3a58377918dc9dfab0647313dafaee1f
