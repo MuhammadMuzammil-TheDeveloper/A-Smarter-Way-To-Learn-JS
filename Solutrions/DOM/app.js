@@ -79,3 +79,34 @@ function showName(){
     var name = document.getElementById('name')
     document.querySelector('#result').innerHTML=name
 }
+
+// var heading = document.getElementById('title')
+// heading.innerText == 'hello Muzammil'
+
+// var btn = document.getElementById('btn')
+// btn.addEventListener('click', function(){
+//     body.style.backgroundColor = 'black';
+// })
+
+
+// <input type="text" id="name" onClick='getData(this)'>
+// var inputData = document.getElementById('name')
+// function getData(name){
+// console.log(name.value)
+// }
+
+var userName = document.getElementById('userName')
+var userAge = document.getElementById('userAge')
+var userEmail = document.getElementById('userEmail')
+
+var table = document.getElementById('table')
+var btn = document.getElementById('btn')
+ btn.addEventListener('click', function(e){
+        e.preventDefault();  
+    var tableData = `    <tr>
+        <td>${userName.value}</td>
+        <td>${userAge.value}</td>
+        <td>${userEmail.value}</td>
+    </tr>`
+    table.innerHTML +=tableData
+ })
