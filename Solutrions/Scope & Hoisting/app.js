@@ -27,3 +27,31 @@
 // }
 
 // console.log(x);
+
+
+//Hosting
+// console.log(a)
+// var a =15   //output undefine
+
+// var a;
+// console.log(a)
+// a=14  //output undefine
+
+
+// sayHello();
+
+// function sayHello(){
+//  console.log("Hello");
+// }
+
+// carName = "Volvo";
+// console.log(carName)
+// let carName;
+
+// carName = "Volvo";
+// console.log(carName) 
+// const carName;
+
+carName = "Volvo";
+console.log(carName) 
+var carName;
